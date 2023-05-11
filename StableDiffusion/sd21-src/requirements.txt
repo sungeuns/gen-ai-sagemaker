@@ -1,0 +1,4 @@
+diffusers
+safetensors
+boto3
+#xformers
