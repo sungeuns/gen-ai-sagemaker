@@ -22,6 +22,7 @@ It explains how to test and deploy StableDiffusion on SageMaker
 
 It explains how to test, deploy, and fine-tune (SFT, RLHF) Dolly on SageMaker
 - Check the `Dolly` directory.
+- The example is explained using Korean.
 
 
 ### Package version
