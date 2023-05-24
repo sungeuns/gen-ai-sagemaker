@@ -23,3 +23,9 @@ It explains how to test and deploy StableDiffusion on SageMaker
 It explains how to test, deploy, and fine-tune (SFT, RLHF) Dolly on SageMaker
 - Check the `Dolly` directory.
 
+
+### Package version
+
+- All examples are tested on Python 3.9. Local mode notebook have a version information of python packages.
+- If it has error when deploy to endpoint, check the local mode version and match with this version in the `requirements.txt`
+
