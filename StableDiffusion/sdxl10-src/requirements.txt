@@ -1,0 +1,5 @@
+boto3
+safetensors==0.3.1
+transformers==4.31.0
+accelerate==0.21.0
+diffusers==0.19.3
