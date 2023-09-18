@@ -32,24 +32,24 @@ from streamlit_util import KoSimCSERobertaContentHandler, KullmContentHandler, S
 
 
 ######## AWS Setting
-aws_region = 'us-east-1'
-region ='us-east-1'
+aws_region = 'us-west-2'
+region ='us-west-2'
 service ='es'
 
 ######## For SageMaker
 # LLM Endpoint Name :
-llm_endpoint_name = 'kullm-polyglot-5-8b-v2-2023-08-23-15-47-39-450-endpoint'
+llm_endpoint_name = 'kullm-polyglot-5-8b-v2-2023-09-18-01-46-56-120-endpoint'
 # Embedding Vector Model Endpoint Name :
-embvec_endpoint_name= 'KoSimCSE-roberta-2023-08-23-14-07-12'
+embvec_endpoint_name= 'KoSimCSE-roberta-2023-09-18-01-31-27-389'
 
 ######## For OpenSearch 
 # Opensearch index name : 
 index_name = 'fsi-sample'
 # Opensearch domain_endpoin name :
-opensearch_domain_endpoint = "https://search-ragopensearch-2pz3fgitugmvrz7vbngitqljzu.us-east-1.es.amazonaws.com"
+opensearch_domain_endpoint = "https://search-rag-opensearch-03-gzwhdpf6dndg2rj2vm3fqvnaxa.us-west-2.es.amazonaws.com"
 # Opensearch master user auth
 username = 'raguser'
-password = 'MarsEarth1!'
+password = 'QWEqwe123!@#'
 
 #aws_access_key = os.environ['AWS_ACCESS_KEY']
 #aws_secret_key =os.environ['AWS_SECRET_KEY']
