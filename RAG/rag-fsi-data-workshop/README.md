@@ -41,7 +41,8 @@ Amazon Opensearch의 통합은 RAG 아키텍처의 정보 검색 능력을 더�
 ## 한국어 금융 QnA 챗봇 모델 생성 가이드
 
 ### Step 1. SageMaker Endpoint에 Embedding Vector 모델 배포
-[보기 - TASK-1_Embedding_Vector_Model_Creation.ipynb](https://github.com/gonsoomoon-ml/Kor-LLM-On-SageMaker/blob/main/2-Lab02-QA-with-RAG/4.rag-fsi-data-workshop/TASK-1_Embedding_Vector_Model_Creation.ipynb)
+
+- `TASK-1_Embedding_Vector_Model_Creation.ipynb`
 
 1. AWS SageMaker Studio 콘솔에 로그인합니다.
 2. SageMaker Studio 로컬에서 embedding tokenizer를 테스트 해봅니다.
@@ -49,8 +50,8 @@ Amazon Opensearch의 통합은 RAG 아키텍처의 정보 검색 능력을 더�
 4. 모델 배포가 완료되면, 생성된 Endpoint를 확인합니다.
 
 ### Step 2. SageMaker Endpoint에 Ployglot 한국어 LLM 5.8B(이벤트엔진계정의 경우) or 12.8B 배포
-[보기 - TASK-2_Polyglot_5.8B_Korea_LLM_Model_Creation.ipynb](https://github.com/gonsoomoon-ml/Kor-LLM-On-SageMaker/blob/main/2-Lab02-QA-with-RAG/4.rag-fsi-data-workshop/TASK-2_Polyglot_5.8B_Korea_LLM_Model_Creation.ipynb)
-[보기 - TASK-2-optional_Polyglot_12.8B_Korea_LLM_Model_Creation.ipynb](https://github.com/gonsoomoon-ml/Kor-LLM-On-SageMaker/blob/main/2-Lab02-QA-with-RAG/4.rag-fsi-data-workshop/TASK-2-optional_Polyglot_12.8B_Korea_LLM_Model_Creation.ipynb)
+- `TASK-2_Polyglot_5.8B_Korea_LLM_Model_Creation.ipynb`
+- `TASK-2-optional_Polyglot_12.8B_Korea_LLM_Model_Creation.ipynb`
 
 1. SageMaker 콘솔로 돌아가서 새 모델을 생성합니다.
 2. Polyglot 한국어 LLM 5.8B (이벤트엔진 계정의 경우) 또는 12.8B를 선택합니다. (실습 이벤트엔진 계정에서 배포할 수 있는 5.8B모델의 경우 G5.2xlarge GPU1개 인스턴스에서 생성되나 LLM의 성능은 12.8B에 비해 떨어집니다.)
@@ -58,14 +59,14 @@ Amazon Opensearch의 통합은 RAG 아키텍처의 정보 검색 능력을 더�
 4. 배포가 완료되면 새로운 Endpoint를 확인한 다음, 문장요약 테스트를 합니다. 
 
 ### Step 3. 한국어 금융 Question & Answering 데이터 로컬 임베딩 검색 테스트
-[보기 - TASK-3_FSI_FAQ_Faiss_Vector_Search_Local_Store_Test.ipynb](https://github.com/gonsoomoon-ml/Kor-LLM-On-SageMaker/blob/main/2-Lab02-QA-with-RAG/4.rag-fsi-data-workshop/TASK-3_FSI_FAQ_Faiss_Vector_Search_Local_Store_Test.ipynb)
+- `TASK-3_FSI_FAQ_Faiss_Vector_Search_Local_Store_Test.ipynb`
 
 1. SageMaker Studio 로컬 환경에서 한국어 금융 QnA 데이터셋을 준비합니다.
 2. 앞서 생성한 Embedding Vector 모델의 Endpoint를 사용하여 데이터를 임베딩합니다.
 3. 임베딩된 데이터를 Studio 로컬에서 로드한 다음 검색 RAG 테스트를 진행합니다.
 
 ### Step 4. SageMaker Opensearch 생성 및 인덱스에 금융 FAQ 임베딩 데이터 입력 검색 테스트 
-[보기 - TASK-4_OpenSearch_Creation_and_Vector_Insertion.ipynb](https://github.com/gonsoomoon-ml/Kor-LLM-On-SageMaker/blob/main/2-Lab02-QA-with-RAG/4.rag-fsi-data-workshop/TASK-4_OpenSearch_Creation_and_Vector_Insertion.ipynb)
+- `TASK-4_OpenSearch_Creation_and_Vector_Insertion.ipynb`
 
 1. AWS 콘솔에서 SageMaker Opensearch 서비스를 찾아 들어갑니다.
 2. 새 Opensearch 도메인을 생성합니다.
@@ -75,7 +76,8 @@ Amazon Opensearch의 통합은 RAG 아키텍처의 정보 검색 능력을 더�
 
 
 ### Step 5. Streamlit으로 QnA 챗봇 모델 생성해보기 
-[보기 - TASK-5_OpenSearch_LLM_RAG_Streamlit_Chatbot_Example.py](https://github.com/gonsoomoon-ml/Kor-LLM-On-SageMaker/blob/main/2-Lab02-QA-with-RAG/4.rag-fsi-data-workshop/TASK-5_OpenSearch_LLM_RAG_Streamlit_Chatbot_Example.py)
+- `TASK-5_OpenSearch_LLM_RAG_Streamlit_Chatbot_Example.py`
+
 1. SageMaker Studio System Terminal을 엽니다.
 2. System Terminal 환경에서 Streamlit관련 패키지들을 설치합니다.
 ```sh
@@ -85,7 +87,7 @@ pip install -r AWS-LLM-SageMaker/RAG-SageMaker/rag-fsi-data-workshop/requirement
 4. Streamlit 앱 파일을 오픈하고, SageMaker Embedding Vector 모델, Ployglot LLM 모델, opensearch_domain_endpoint 정보를 입력 수정합니다.
 5. Streamlit을 실행해봅니다.
 ```sh
-Streamlit run TASK-5_OpenSearch_LLM_RAG_Streamlit_Chatbot_Example.py
+streamlit run TASK-5_OpenSearch_LLM_RAG_Streamlit_Chatbot_Example.py
 ```
 6. QnA 챗봇 로직은 알맞게 수정해봅니다. 
 7. 앱을 실행하여 챗봇 모델이 잘 동작하는지 테스트합니다.
