@@ -71,18 +71,18 @@ def create_peft_config(model):
     # prepare int-8 model for training
     pretrained_model = prepare_model_for_int8_training(model)
 
-    # 몇가지 GPU 인스턴스에서는 gpt-neox 기반 모델 학습 시 아래와 같은 에러 발생해서 추가함
-    # RuntimeError: expected scalar type Half but found Float
-    # ---------------------------------------
-    for name, param in pretrained_model.named_parameters():
-        # freeze base model's layers
-        param.requires_grad = False
+#     # 몇가지 GPU 인스턴스에서는 gpt-neox 기반 모델 학습 시 아래와 같은 에러 발생해서 추가함
+#     # RuntimeError: expected scalar type Half but found Float
+#     # ---------------------------------------
+#     for name, param in pretrained_model.named_parameters():
+#         # freeze base model's layers
+#         param.requires_grad = False
 
-        if getattr(pretrained_model, "is_loaded_in_8bit", False):
-            # cast layer norm in fp32 for stability for 8bit models
-            if param.ndim == 1 and "layer_norm" in name:
-                param.data = param.data.to(torch.float16)
-    # ---------------------------------------
+#         if getattr(pretrained_model, "is_loaded_in_8bit", False):
+#             # cast layer norm in fp32 for stability for 8bit models
+#             if param.ndim == 1 and "layer_norm" in name:
+#                 param.data = param.data.to(torch.float16)
+#     # ---------------------------------------
 
     model = get_peft_model(pretrained_model, peft_config)
     model.print_trainable_parameters()
