@@ -1,6 +1,10 @@
 
 ## Fine-tuning LLM using Dolly
 
+### 로컬 모드 환경
+- LLM 모델을 local 에서 inference 해 보거나, fine-tuning 등을 테스트해 보기 위해서는 local storage가 `30GB` 이상 필요합니다. (`40~50GB 이상`을 추천합니다)
+- 7B 크기의 LLM 모델의 경우 `g4dn.2xlarge` 이상의 인스턴스를 추천하며, 안정적으로 사용하기 위해서는 `g5.2xlarge` 이상의 인스턴스를 사용하는 것이 좋습니다. (16bit 기준, 8bit quantization 시 g4dn으로도 안정적으로 가능)
+
 ### 실습
 - `01-local-mode-dolly-inference.ipynb`
   - Local mode로 LLM을 테스트 해봅니다.
