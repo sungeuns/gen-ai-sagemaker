@@ -1,0 +1,6 @@
+transformers==4.37.2
+
+# To run autoawq on LMI DLC, need to check python and cuda version
+#autoawq==0.1.8
+#git+https://github.com/casper-hansen/AutoAWQ
+https://github.com/casper-hansen/AutoAWQ/releases/download/v0.1.8/autoawq-0.1.8+cu118-cp39-cp39-linux_x86_64.whl
