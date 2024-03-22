@@ -4,6 +4,7 @@
 
 한국어를 지원하는 LLM (base model) 을 특정한 데이터에 맞추어서 fine-tuning 하는 예시입니다.
 - PEFT를 활용하여 LoRA 알고리즘으로 작은 GPU instance에서 학습을 진행 해 봅니다.
+- 여기서는 medical QA 데이터를 활용합니다. 일반적인 케이스는 아니지만 base model 과 fine-tuning 모델의 차이가 크게 나는 것을 확인해 보기 위해서 특수한 데이터를 사용하였습니다.
 
 
 ### 실습 진행
