@@ -42,6 +42,6 @@ datasets==2.18.0
 샘플 데이터 참고
 - https://huggingface.co/datasets/sean0042/KorMedMCQA
 
-Base model 참고 (
+Base model 참고
 - https://huggingface.co/LDCC/LDCC-SOLAR-10.7B (v1.2)
 
