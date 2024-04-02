@@ -53,7 +53,7 @@ def load_model(properties):
 def infer(llm_model, llm_tokenizer, params, instruction="", input_text=""):
 
     text = f"""
-<s> ### User:
+### User:
 {instruction}
 
 {input_text}
