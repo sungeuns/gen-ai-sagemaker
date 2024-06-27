@@ -10,6 +10,7 @@
 - `02-aoss-creation.ipynb` : Opensearch의 기본적인 사용 방법을 실습 해 봅니다.
 - `03-data-prep-indexing.ipynb` : 데이터를 준비하고 인덱싱하는 기본적인 방법을 실습 해 봅니다.
 - `04-rag-simple.ipynb` : 가장 기본적인 형태의 RAG 원리를 실습 해 봅니다.
+- `05-rag-with-faq.ipynb` : 한글 문서와 FAQ 같은 추가 정보를 넣은 구성을 실습 해 봅니다.
 
 
 #### Bedrock 활용 
